@@ -1,6 +1,7 @@
 export const initialState = {
   currentPage: 1,
-  lists: []
+  lists: [],
+  maxPages: 30
 };
 
 export default function reducer(state, action) {
@@ -9,9 +10,9 @@ export default function reducer(state, action) {
     case 'SET_LISTS':
       return { ...state, lists: action.payload.results };
     case 'INCREMENT_PAGE':
-      return { ...state, currentPage: initialState.currentPage + 1 };
+      return { ...state, currentPage: state.currentPage + 1 };
     case 'DECREMENT_PAGE':
-      return { ...state, currentPage: initialState.currentPage - 1 };
+      return { ...state, currentPage: state.currentPage - 1 };
     default:
       return state;
   }

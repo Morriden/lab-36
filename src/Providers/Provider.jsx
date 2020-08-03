@@ -25,9 +25,9 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      <button name='decrement' onClick={handleClick}>Previous</button>
+      {state.currentPage > 1 && <button name='decrement' onClick={handleClick}>Previous</button>}
       <div>{state.currentPage}</div>
-      <button name='increment' onClick={handleClick}>Next</button>
+      {state.currentPage < state.maxPages && <button name='increment' onClick={handleClick}>Next</button>}
       {children}
     </AppContext.Provider>
   );
