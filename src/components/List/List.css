@@ -1,0 +1,25 @@
+@import '../../styles/variables.css';
+
+.List {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  transition: 0.2s;
+
+  img {
+    width: 10rem;
+  }
+}
+
+.List-light {
+  composes: List;
+
+  background-color: var(--light-bg-color);
+  color: var(--light-fg-color);
+}
+
+.List-dark {
+  composes: List;
+
+  background-color: var(--dark-bg-color);
+  color: var(--dark-fg-color);
+}

@@ -1,11 +1,11 @@
 export const initialState = {
   currentPage: 1,
   lists: [],
-  maxPages: 30
+  maxPages: 30,
+  theme: 'light'
 };
 
 export default function reducer(state, action) {
-  console.log(state.currentPage, 'appreducer');
   switch(action.type) {
     case 'SET_LISTS':
       return { ...state, lists: action.payload.results };
@@ -13,6 +13,8 @@ export default function reducer(state, action) {
       return { ...state, currentPage: state.currentPage + 1 };
     case 'DECREMENT_PAGE':
       return { ...state, currentPage: state.currentPage - 1 };
+    case 'TOGGLE_THEME':
+      return { ...state, theme: state.theme === 'light' ? 'dark' : 'light' };
     default:
       return state;
   }

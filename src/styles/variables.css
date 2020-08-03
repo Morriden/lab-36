@@ -1,0 +1,14 @@
+  
+:root {
+    --light-bg-color: #E1E1E1;
+    --dark-bg-color: #333333;
+  
+    --light-fg-color: black;
+    --dark-fg-color: white;
+  
+    --light-primary-color: blue;
+    --dark-primary-color: red;
+  
+    --light-secondary-color: red;
+    --dark-secondary-color: blue;
+  }

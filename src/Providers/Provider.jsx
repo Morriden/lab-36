@@ -20,7 +20,6 @@ const AppProvider = ({ children }) => {
     const { currentPage } = state;
     fetchList(currentPage)
       .then(payload => dispatch({ type: 'SET_LISTS', payload }));
-    console.log(currentPage);
   }, [state.currentPage]);
 
   return (
